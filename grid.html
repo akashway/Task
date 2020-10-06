@@ -1,0 +1,90 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>CSS GRID</title>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    .main{
+        width:90%;
+        margin:50px;
+        border:1px solid black;
+        color:white;
+        display:grid;
+        grid-template-rows: 150px 150px;
+        grid-template-columns: 1fr 1fr 1fr;
+      /*   grid-template-columns: minmax(150px,200px) 1fr 1fr; 
+
+        grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); */
+        grid-row-gap:30px;
+        grid-column-gap:30px;
+        grid-auto-rows: 150px;
+    
+    }
+
+    .one{
+        background-color:chocolate;
+    }
+
+    .two{
+        background-color:blue;
+    }
+
+    .three{
+        background-color:green;
+    }
+
+    .four{
+        background-color:yellow;
+        grid-row-start:1; grid-row-end:2;
+        grid-column-start:2; grid-column-end:3;
+    }
+
+    .five{
+        background-color:skyblue;
+    }
+
+    .six{
+        background-color:violet;
+    }
+
+ /*   .seven{
+        background-color:black;
+    }
+*/
+</style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="one">
+            div1
+        </div>
+
+        <div class="two">
+            div2
+        </div>
+
+        <div class="three">
+            div3        
+        </div>
+
+        <div class="four">
+            div4        
+        </div>
+
+        <div class="five">
+            div5       
+        </div>
+        <div class="six">
+            div6
+        </div>
+       <!-- <div class="seven">
+            div7
+        </div> -->
+    </div>
+</body>
+</html> 
